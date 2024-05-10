@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Blog Layout</title>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+  </head>
+  <body>
+    <h1>My Personal Blog</h1>
+    This webpage was inspired by an Actix-web project by R.Vyas 
+    <section class="posts">
+      {{#each posts}}
+        <article class="post">
+          <img src="{{this.image_path}}" />
+          <h3>{{this.title}}</h3>          
+          <h4>By: {{this.author}}</h4>
+        </article>
+      {{/each}}
+    </section>
+  </body>
+</html>
